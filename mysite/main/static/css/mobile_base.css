@@ -1,0 +1,51 @@
+/* Css used only for the mobile version*/
+
+.mobile-body{
+    background: #091233;
+
+}
+
+.mobile-header {
+    background-color: white;
+    height: 3000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    margin-bottom: 260px;
+
+}
+
+.mobile-curve {
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.mobile-curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 10% 130% 10% 10%;
+    width: 55%;
+    height: 20%;
+    transform: translate(-3.75%, 440%);
+    background-color: #091233;
+}
+.mobile-curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 10% 100% 80% 100%;
+    width: 60%;
+    height: 75%;
+    background-color: white;
+    transform: translate(75%, 60%);
+    z-index: -1;
+}
+
+

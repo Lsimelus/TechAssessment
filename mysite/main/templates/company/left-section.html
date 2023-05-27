@@ -1,0 +1,73 @@
+{% load static %}
+
+{% if mobile  %}
+<div class="col-6">
+    <!-- Block Bookmark -->
+    <div class="row">
+       <div class="col-3 pl-3">
+          <div class="bookmark-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="#122365" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+             </svg>
+             <div class="bookmark-id h3 ml-2">{{key}}</div>
+          </div>
+       </div>
+    </div>
+    <!-- Company Logo -->
+    <div class="row">
+       <div class="col d-flex justify-content-center ">
+          {%if values.img == "college-ave" %}
+          <img src="{% static 'images/company-logo/college-ave.png' %}" class="resizeable-img">
+          {%elif values.img == "earnest"%}
+          <img src="{% static 'images/company-logo/earnest.png' %}" class="resizeable-img">
+          {% else %}
+          <img src="{% static 'images/company-logo/college-finance.png' %}" class="resizeable-img" >
+          {% endif%}
+       </div>
+    </div>
+    <!-- Partner Flag  -->
+    {% if values.partner  %}
+    <div class="row">
+       <div class="col font-weight-bold d-flex justify-content-center text-black-50">
+          Our Partner
+       </div>
+    </div>
+    {% endif %}
+ </div>
+
+{%else%}
+<div class="col-3">
+    <!-- Block Bookmark -->
+    <div class="row">
+       <div class="col-3 pl-3">
+          <div class="bookmark-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="#122365" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+             </svg>
+             <div class="bookmark-id h3 ml-2">{{key}}</div>
+          </div>
+       </div>
+    </div>
+    <!-- Company Logo -->
+    <div class="row">
+       <div class="col d-flex justify-content-center ">
+          {%if values.img == "college-ave" %}
+          <img src="{% static 'images/company-logo/college-ave.png' %}" class="resizeable-img">
+          {%elif values.img == "earnest"%}
+          <img src="{% static 'images/company-logo/earnest.png' %}" class="resizeable-img">
+          {% else %}
+          <img src="{% static 'images/company-logo/college-finance.png' %}" class="resizeable-img" >
+          {% endif%}
+       </div>
+    </div>
+    <!-- Partner Flag  -->
+    {% if values.partner  %}
+    <div class="row">
+       <div class="col font-weight-bold d-flex justify-content-center text-black-50">
+          Our Partner
+       </div>
+    </div>
+    {% endif %}
+ </div>
+
+{% endif %}

@@ -1,0 +1,51 @@
+{% load static %}
+<p class="text-center pl-5 pr-5 ">Companies listed on this page provide commissions to LendEDU. Compensation, along with in-depth editorial research, informs where companies appear below.</p>
+<hr />
+<p class="h4 text-center mb-5 title-desc"><img src="{% static 'images/white-logo.png' %}" width="34"> Lend<span class="font-weight-light">EDU</span></p>
+<div class="container ">
+   <!-- Title and Description -->
+   <div class="row ">
+      <div class="col-12">
+         <p class="h1 font-weight-bold big-title">Best Private Student Loans of 2023</p>
+      </div>
+      <div class="col-12">
+         <p >After 40+ hours of research, here are our picks for the best pet insurance companies amongst our 16 partners.</p>
+      </div>
+   </div>
+</div>
+<!-- Site info -->
+<div class="container ">
+   <div class="row mb-4 font-weight-bold">
+      <div class="col-4 d-flex ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#D9D9D9" class="bi bi-circle-fill" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="8"/>
+         </svg>
+         <p class="ml-2 text-black-50">Last Updated: Dec 6, 2022</p>
+      </div>
+      <div class="col-4 d-flex ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#D9D9D9" class="bi bi-circle-fill" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="8"/>
+         </svg>
+         <p class="ml-2 text-black-50">Secure Website</p>
+      </div>
+   </div>
+   <!-- Header Blurb -->
+   <div class="row">
+      {% if mobile  %}
+      <div class="col-12">
+         <p>To find the best student loan providers, we read hundreds of reviews & talked to lending experts to help us understand the inner workings of a multi-billion dollar a year industry. Then we got on the phone to quz 17 lenders about their coverage, and we dug into each of their services agreements before finding the best 
+            companies that rise above their competition.
+         </p>
+      </div>
+      {% else %}
+      <div class="col-8">
+         <p>To find the best student loan providers, we read hundreds of reviews & talked to lending experts to help us understand the inner workings of a multi-billion dollar a year industry. Then we got on the phone to quz 17 lenders about their coverage, and we dug into each of their services agreements before finding the best 
+            companies that rise above their competition.
+         </p>
+      </div>
+      <div class="col-4  d-flex justify-content-center align-items-start">
+         <img src="{% static 'images/stat.png' %}" class="resizeable-img" >
+      </div>
+      {% endif%}
+   </div>
+</div>

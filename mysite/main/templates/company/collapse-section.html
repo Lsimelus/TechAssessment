@@ -1,0 +1,61 @@
+{% load static %}
+{% if mobile  %}
+<div class="row">
+   <!-- Company Card Section -->
+   <div class="col-12 justify-content-center">
+      <ul class="checkmark">
+         {% for bullet in values.bold%}
+         <li class="pros font-weight-bold">{{bullet}}</li>
+         {% endfor%}
+         {% for bullet in values.desc%}
+         <li class="pros">{{bullet}}</li>
+         {% endfor%}
+      </ul>
+   </div>
+</div>
+<div class="row">
+   <div class="col-6 justify-content-center text-center">
+      <p class="font-weight-bold company-footer">See Disclosures</p>
+   </div>
+   <div class="col-6 justify-content-center">
+      <p class="font-weight-bold company-footer">Read Full Review</p>
+   </div>
+</div>
+{%else%}
+<div class="row">
+   <!-- Company Card Left Section -->
+   <div class="col-6 justify-content-center">
+      <p class="font-weight-bold">
+         Review
+      </p>
+      <p class="font-weight-light">
+         {{values.review}}  
+      </p>
+      <p class="text-black-50">
+         Read Full Review
+      </p>
+      <p class="text-black-50">
+         See Disclosures
+      </p>
+   </div>
+   <!-- Company Card Right Section -->
+   <div class="col-6 justify-content-center">
+      <p class="font-weight-bold">
+         Pros
+      </p>
+      <ul>
+         {% for bullet in values.pros%}
+         <li class="pros">{{bullet}} </li>
+         {% endfor%}
+      </ul>
+      <p class="font-weight-bold">
+         Cons
+      </p>
+      <ul>
+         {% for bullet in values.cons%}
+         <li class="cons">{{bullet}} </li>
+         {% endfor%}
+      </ul>
+   </div>
+</div>
+{% endif %}

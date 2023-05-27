@@ -1,0 +1,45 @@
+
+{% if mobile  %}
+<body class="mobile-body">
+   <!-- START: Main Header Section -->
+   <section class="mobile-header">
+      {% include "main/header.html"%}
+      <!-- START: Company Section -->
+      <div class="container mt-5 company-section">
+         <div class="bg-white p-0">
+            <!-- Loop on company Data -->
+            {% for key, values in data.items%}
+            <div class="container p-0">
+               {% include "company/section.html"%}
+            </div>
+            {% endfor%}
+         </div>
+      </div>
+      <!-- END: Company Section -->
+      <!-- Curve at the bottom of the Header -->
+      <div class="mobile-curve"></div>
+   </section>
+   <!-- END: Main Header Section -->
+</body>
+{%else%}
+<body class="pc-body">
+   <!-- START: Main Header Section -->
+   <section class="main-header">
+      {% include "main/header.html"%}
+      <!-- Curve at the bottom of the Header -->
+      <div class="curve"></div>
+   </section>
+   <!-- START: Company Section -->
+   <div class="container mt-5 company-section">
+      <div class="bg-white p-0">
+         <!-- Loop on company Data -->
+         {% for key, values in data.items%}
+         <div class="container p-0">
+            {% include "company/section.html"%}
+         </div>
+         {% endfor%}
+      </div>
+   </div>
+   <!-- END: Company Section -->
+</body>
+{% endif %}

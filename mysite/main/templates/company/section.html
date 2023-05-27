@@ -1,0 +1,64 @@
+{% load static %}
+<div class="row p-0">
+   <!-- Left Section of Company Block -->
+   {% include "company/left-section.html"%}
+   {% if mobile == False %}
+   <!-- Middle Section of Company Block -->
+   <div class="col-6">
+      <ul class="checkmark">
+         <!-- Best Flag for first company -->
+         {% if key == "1" %}
+         <div class="container mt-4 mb-2">
+            <div class="row">
+               <div class="col ">
+                  <img src="{% static 'images/best.png' %}" width="250" >
+               </div>
+            </div>
+         </div>
+         {% endif %}
+         <!-- Company Review -->
+         {% for bullet in values.bold%}
+         <li class="pros font-weight-bold">{{bullet}}</li>
+         {% endfor%}
+         {% for bullet in values.desc%}
+         <li class="pros">{{bullet}}</li>
+         {% endfor%}
+      </ul>
+      <p class="font-weight-bold check-rate">CHECK YOUR RATE</p>
+   </div>
+   {% endif %}
+   {% include "company/right-section.html"%}
+</div>
+<!-- Bottom Section of Company Block -->
+<div class="company shadow p-2 mb-3 rounded">
+   <span>
+      <!-- Collpased view of middle section -->
+      <div class="row font-weight-bold mt-2">
+         <!-- Collpased Trigger-->
+         <div class="col-9 d-flex justify-content-center">
+            <span>
+               <a id="collapse{{key}}-trigger" onClick="footerIcon({{key}})" class="company-footer" data-toggle="collapse" href="#collapse{{key}}" role="button" aria-expanded="false" aria-controls="collapse{{key}}">
+               View Details
+               </a>
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                  <path id="collapse{{key}}-icon" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+               </svg>
+            </span>
+         </div>
+         <!-- Check Rate -->
+         <div class="col-3">
+            <p  class="company-footer" >
+               CHECK YOUR RATE
+            </p>
+         </div>
+      </div>
+   </span>
+   <!-- Collapse card for company section -->
+   <div class="collapse multi-collapse" id="collapse{{key}}">
+      <div class="card card-body">
+         <div class="container">
+            {% include "company/collapse-section.html"%}
+         </div>
+      </div>
+   </div>
+</div>

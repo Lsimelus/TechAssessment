@@ -1,0 +1,78 @@
+{% load static %}
+{% if mobile  %}
+<footer >
+   <!-- Sponsor Logos -->
+   <div class="container mt-4">
+      <div class="row">
+         <div class="col d-flex justify-content-center">
+            <img src="{% static 'images/mobile-footer-logo.png' %}" class="resizeable-img" >
+         </div>
+      </div>
+   </div>
+   <!-- Footer Spliting hr -->
+   <hr class="footer-hr"/>
+   <div >
+
+   <!-- Bottom section of footer -->
+   <div class="container text-center text-md-start mt-1">
+      <div class="row">
+         <!-- Top Section -->
+         <div class="col-12">
+            <ul class="list-unstyled ">
+               <li>Shop Tutors Inc.</li>
+               <li>80 River St</li>
+               <li>STE #3C</li>
+               <li>Hoboken NJ 07040-5626</li>
+            </ul>
+         </div>
+         <hr class="footer-hr"/>
+         <!-- Middle Section -->
+         <div class="col-12">
+            <p >Terms of Use Privacy</p>
+         </div>
+         <div class="col-12">
+            <p class="h5 text-center text-white"><img width="50" src="{% static 'images/colored-logo.png' %}"  > Lend<span class="font-weight-light">EDU</span></p>
+            <p>© 2023 Shop Tutors, Inc.</p>
+         </div>
+      </div>
+   </div>
+   <!-- Section: Links  -->
+</footer>
+{%else%}
+<footer >
+   <!-- Sponsor Logos -->
+   <div class="container mt-4">
+      <div class="row">
+         <div class="col d-flex justify-content-center">
+            <img src="{% static 'images/footer-logo.png' %}" class="resizeable-img" >
+         </div>
+      </div>
+   </div>
+   <hr class="footer-hr"/>
+   <div >
+   <!-- Footer Bottom Section  -->
+   <div class="container text-center text-md-start mt-1">
+      <div class="row">
+
+         <!-- Left Section -->
+         <div class="col-4">
+            <ul class="list-unstyled text-left">
+               <li>Shop Tutors Inc.</li>
+               <li>80 River St</li>
+               <li>STE #3C</li>
+               <li>Hoboken NJ 07040-5626</li>
+            </ul>
+         </div>
+         <!-- Middle Section -->
+         <div class="col-4">
+            <p class="h5 text-center text-white"><img width="50" src="{% static 'images/colored-logo.png' %}"  > Lend<span class="font-weight-light">EDU</span></p>
+            <p>© 2023 Shop Tutors, Inc.</p>
+         </div>
+         <!-- Right Section -->
+         <div class="col-4">
+            <p class="text-right">Terms of Use Privacy</p>
+         </div>
+      </div>
+   </div>
+</footer>
+{% endif %}
