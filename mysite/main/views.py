@@ -165,7 +165,5 @@ def index(response):
 
 
         }}
-    #if is_mobile:
+
     return render(response, "main/base.html", data)
-    #else:
-    #    return render(response, "main/base.html", data)
