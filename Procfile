@@ -1,1 +1,1 @@
-web gunicorn lsimelus-tech-assessment.wsgi:application — log-file - 
+web gunicorn lsimelus-tech-assessment.wsgi — log-file - 
