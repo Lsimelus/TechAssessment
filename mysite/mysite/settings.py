@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
+import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-xe^ss!rwrxyrvyzn(mb-%l^m_p91%2v$gp=2gpm((es_$uu=)i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -132,3 +134,4 @@ MEDIA_ROOT = BASE_DIR/ "static/images"
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+django_on_heroku.settings(locals())
